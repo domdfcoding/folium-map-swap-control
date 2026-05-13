@@ -7,6 +7,8 @@
 * MIT Licence
 */
 
+/* TODO: No right hand radius on control when box open, and put bottom left radius of box back */
+
 /* global styling */
 .leaflet-control-map-swap * {
 	box-sizing: border-box;
@@ -31,6 +33,7 @@
 	a {
 		/* background-color: #fff; */
 		width: fit-content;
+		min-width: 100%;
 		outline: none;
 		border: none;
 		margin: 0;
@@ -39,6 +42,8 @@
 		height: 30px;
 		border: none;
 		border-radius: 0 4px 4px 0;
+		min-width: 100%;
+		white-space: nowrap;
 	}
 
 }
@@ -73,13 +78,6 @@
 	left: 0;
 	display: block;
 	border-radius: 4px;
-
-	a {
-		min-width: 100%;
-		width: 100%;
-		white-space: nowrap;
-	}
-
 }
 
 .leaflet-right .leaflet-control-map-swap .map-swap-links {

@@ -76,7 +76,6 @@ const MapSwapControl = L.Control.extend({
 
 	open() {
 		this._container.classList.add('active');
-		this._form.focus();
 	},
 
 	close() {
@@ -108,9 +107,8 @@ const MapSwapControl = L.Control.extend({
 		this._container = container;
 		this._map = map;
 
-		this._form = createElement('div', 'map-swap-links', container);
-		// TODO: make it a standard button or hyperlink
-		this._form.innerHTML = '<a class="glass" role=button href="#">Go to Heatmap</a>';
+		this._form = createElement('div', 'map-swap-links px-2 py-1', container);
+		this._form.innerHTML = '<span class="text-center">Go To Map</span><a role=button href="#" class="border rounded my-1 text-start">Heatmap</a><a role=button href="#" class="border rounded  my-1 text-start">Another Map</a>';
 		const linkAndIcon = this.options.createButtonCallback(container, this.options);
 		this._link = linkAndIcon.link;
 		this._icon = linkAndIcon.icon;
