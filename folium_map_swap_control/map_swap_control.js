@@ -145,7 +145,7 @@ const MapSwapControl = L.Control.extend({
 
 		this._form = createElement('div', 'map-swap-links px-2 py-1', container);
 
-		const header = createElement('span', 'text-center', this._form);
+		const header = createElement('span', 'ms-1', this._form);
 		header.innerHTML = 'Go To Map';
 
 		for (const [map, target] of Object.entries(this.options.maps)) {
