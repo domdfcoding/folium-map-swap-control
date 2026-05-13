@@ -76,6 +76,7 @@ const MapSwapControl = L.Control.extend({
 
 	open() {
 		this._container.classList.add('active');
+		this._form.querySelector('a').focus();
 	},
 
 	close() {
@@ -108,7 +109,17 @@ const MapSwapControl = L.Control.extend({
 		this._map = map;
 
 		this._form = createElement('div', 'map-swap-links px-2 py-1', container);
-		this._form.innerHTML = '<span class="text-center">Go To Map</span><a role=button href="#" class="border rounded my-1 text-start">Heatmap</a><a role=button href="#" class="border rounded  my-1 text-start">Another Map</a>';
+
+		const header = createElement('span', 'text-center', this._form);
+		header.innerHTML = 'Go To Map';
+
+		const maps = ['Heatmap', 'Another Map'];
+		maps.forEach((map) => {
+			const button = createElement('a', 'border rounded my-1 text-start', this._form);
+			button.href = '#';
+			button.innerHTML = map;
+		});
+
 		const linkAndIcon = this.options.createButtonCallback(container, this.options);
 		this._link = linkAndIcon.link;
 		this._icon = linkAndIcon.icon;
