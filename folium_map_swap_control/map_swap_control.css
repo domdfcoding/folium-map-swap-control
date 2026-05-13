@@ -1,0 +1,90 @@
+/* 
+* Copyright © 2026 Dominic Davis-Foster <dominic@davis-foster.co.uk>
+*
+* Adapted from https://github.com/smeijer/leaflet-geosearch
+* Copyright (c) 2010-2016 Stephan Meijer
+*
+* MIT Licence
+*/
+
+/* global styling */
+.leaflet-control-map-swap * {
+	box-sizing: border-box;
+}
+
+/* search form styling */
+.leaflet-control-map-swap form {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	border-radius: 0 4px 4px 0;
+	background-color: #fff;
+	background-clip: padding-box;
+	z-index: -1;
+	height: auto;
+	margin: 0;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+	max-width: 350px;
+	width: fit-content;
+
+	input {
+		background-color: #fff;
+		width: fit-content;
+		outline: none;
+		border: none;
+		margin: 0;
+		padding: 0 8px;
+		font-size: 12px;
+		height: 30px;
+		border: none;
+		border-radius: 0 4px 4px 0;
+	}
+
+}
+
+.leaflet-control-map-swap.active form {
+	display: block;
+}
+
+.leaflet-touch .leaflet-map-swap-bar form {
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	box-shadow: none;
+}
+
+.leaflet-touch .leaflet-map-swap-bar form input {
+	height: 30px;
+}
+
+.leaflet-map-swap-bar {
+	position: relative;
+	display: block;
+	height: auto;
+	width: 400px;
+	max-width: calc(100% - 120px);
+	margin: 10px auto 0;
+	cursor: auto;
+	z-index: 1000;
+}
+
+.leaflet-map-swap-bar form {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	border-radius: 4px;
+
+	input {
+		min-width: 100%;
+		width: 100%;
+	}
+
+}
+
+.leaflet-right .leaflet-control-map-swap form {
+	right: 28px;
+	left: initial;
+	border-radius: 4px 0 0 4px;
+	border-left: inherit;
+	border-right: none;
+}
