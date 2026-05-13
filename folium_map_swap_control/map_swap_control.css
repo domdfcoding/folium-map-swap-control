@@ -28,8 +28,8 @@
 	max-width: 350px;
 	width: fit-content;
 
-	input {
-		background-color: #fff;
+	a {
+		/* background-color: #fff; */
 		width: fit-content;
 		outline: none;
 		border: none;
@@ -52,7 +52,7 @@
 	box-shadow: none;
 }
 
-.leaflet-touch .leaflet-map-swap-bar form input {
+.leaflet-touch .leaflet-map-swap-bar form a {
 	height: 30px;
 }
 
@@ -74,7 +74,7 @@
 	display: block;
 	border-radius: 4px;
 
-	input {
+	a {
 		min-width: 100%;
 		width: 100%;
 	}

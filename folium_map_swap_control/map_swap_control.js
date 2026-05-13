@@ -108,10 +108,9 @@ const MapSwapControl = L.Control.extend({
 		this._container = container;
 		this._map = map;
 
-		this._form = createElement('form', '', container);
-		this._form.autocomplete = 'off';
+		this._form = createElement('div', '', container);
 		// TODO: make it a standard button or hyperlink
-		this._form.innerHTML = '<input class="glass" type="submit" value="Go to Heatmap">';
+		this._form.innerHTML = '<a class="glass" role=button href="#">Go to Heatmap</a>';
 		const linkAndIcon = this.options.createButtonCallback(container, this.options);
 		this._link = linkAndIcon.link;
 		this._icon = linkAndIcon.icon;
