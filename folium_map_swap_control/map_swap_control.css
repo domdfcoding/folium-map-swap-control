@@ -7,11 +7,15 @@
 * MIT Licence
 */
 
-/* TODO: No right hand radius on control when box open, and put bottom left radius of box back */
+/* TODO: ease transition between the leaflet control border "shadow" and the shadow on our popup */
 
 /* global styling */
 .leaflet-control-map-swap * {
 	box-sizing: border-box;
+}
+
+.leaflet-control-map-swap a.leaflet-bar-part {
+	border-radius: 2px;
 }
 
 /* Links styling */
@@ -20,7 +24,7 @@
 	position: absolute;
 	top: 0;
 	left: 30px;
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 4px;
 	background-color: #fff;
 	background-clip: padding-box;
 	z-index: -1;
@@ -40,50 +44,41 @@
 		padding: 0 8px;
 		font-size: 12px;
 		height: 30px;
-		border: none;
-		border-radius: 0 4px 4px 0;
+		border-radius: 4px;
 		min-width: 100%;
 		white-space: nowrap;
 	}
 
 }
 
+.leaflet-control-map-swap.active {
+	border-radius: 4px 0 0 4px;
+
+	a.leaflet-bar-part {
+		border-radius: 2px 0 0 2px !important;
+	}
+}
+
 .leaflet-control-map-swap.active .map-swap-links {
 	display: block;
 }
 
-.leaflet-touch .leaflet-map-swap-bar .map-swap-links {
-	border: 2px solid rgba(0, 0, 0, 0.2);
-	box-shadow: none;
-}
+.leaflet-right {
 
-.leaflet-touch .leaflet-map-swap-bar .map-swap-links a {
-	height: 30px;
-}
+	.leaflet-control-map-swap.active {
+		border-radius: 0 4px 4px 0;
 
-.leaflet-map-swap-bar {
-	position: relative;
-	display: block;
-	height: auto;
-	width: 400px;
-	max-width: calc(100% - 120px);
-	margin: 10px auto 0;
-	cursor: auto;
-	z-index: 1000;
-}
+		a {
+			border-radius: 0 2px 2px 0 !important;
+		}
+	}
 
-.leaflet-map-swap-bar .map-swap-links {
-	position: relative;
-	top: 0;
-	left: 0;
-	display: block;
-	border-radius: 4px;
-}
 
-.leaflet-right .leaflet-control-map-swap .map-swap-links {
-	right: 28px;
-	left: initial;
-	border-radius: 4px 0 0 4px;
-	border-left: inherit;
-	border-right: none;
+	.leaflet-control-map-swap .map-swap-links {
+		right: 28px;
+		left: initial;
+		border-radius: 4px 0 4px 4px;
+		border-left: inherit;
+		border-right: none;
+	}
 }
