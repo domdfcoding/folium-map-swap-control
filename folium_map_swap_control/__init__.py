@@ -47,13 +47,14 @@ class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement): 
 	r"""
 	Control for swapping between maps
 
+	:param maps: Mapping of map names (raw HTML allowed) to hyperlinks.
 	:param icon: The control's icon.
 	:param \*\*kwargs: Additional options for the javascript ``MapSwapControl`` class.
 	"""
 
 	# TODO: options for the individual buttons
 
-	def __init__(self, icon: str = "fa-solid fa-map", **kwargs):
+	def __init__(self, maps: dict[str, str], icon: str = "fa-solid fa-map", **kwargs):
 		super().__init__()
 		self._name = "MapSwapControl"
 		self.options = remove_empty(icon=icon, **kwargs)

@@ -148,8 +148,7 @@ const MapSwapControl = L.Control.extend({
 		const header = createElement('span', 'text-center', this._form);
 		header.innerHTML = 'Go To Map';
 
-		const maps = { 'Heatmap': '/heatmap.html', 'Default': '/' };
-		for (const [map, target] of Object.entries(maps)) {
+		for (const [map, target] of Object.entries(this.options.maps)) {
 			const button = createElement('a', 'border rounded my-1 text-start', this._form);
 			button.role = 'button';
 			button.href = target;
