@@ -33,6 +33,41 @@
 
 // TODO: generate from typescript
 
+/**
+ * Create a DOM element with a class name and optionally append it to a parent.
+ * @param {string} tag - The element tag name.
+ * @param {string} [className] - Space-separated class names.
+ * @param {HTMLElement} [parent] - Optional parent to append the element to.
+ * @returns {HTMLElement}
+ */
+function createElement(tag, className, parent) {
+	const el = document.createElement(tag);
+	if (className) el.className = className;
+	parent?.append(el);
+	return el;
+}
+
+/**
+ * Shallow clone options to prevent prototype pollution.
+ * Clones arrays and plain objects, keeps functions/classes as references.
+ * @param {Object} options - The options object to clone.
+ * @returns {Object} A shallow clone of the options object.
+ */
+function cloneOptions(options) {
+	const cloned = {};
+	for (const key in options) {
+		const val = options[key];
+		if (Array.isArray(val)) {
+			cloned[key] = [...val];
+		} else if (val?.constructor === Object) {
+			cloned[key] = { ...val };
+		} else {
+			cloned[key] = val;
+		}
+	}
+	return cloned;
+}
+
 const MapSwapControl = L.Control.extend({
 	options: {
 		/** Position of the control */
