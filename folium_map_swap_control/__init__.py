@@ -67,6 +67,10 @@ class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement): 
 
 	default_css = [
 			(
+					"fontawesome_css",
+					"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css",
+					),
+			(
 					"map_swap_control_css",
 					f"https://cdn.jsdelivr.net/gh/domdfcoding/folium-map-swap-control@v{__version__}/folium_map_swap_control/map_swap_control.min.css",
 					),
