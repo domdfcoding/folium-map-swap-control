@@ -113,12 +113,32 @@ const MapSwapControl = L.Control.extend({
 		const header = createElement('span', 'text-center', this._form);
 		header.innerHTML = 'Go To Map';
 
-		const maps = ['Heatmap', 'Another Map'];
-		maps.forEach((map) => {
+		const maps = { 'Heatmap': '/heatmap.html', 'Default': '/' };
+		for (const [map, target] of Object.entries(maps)) {
 			const button = createElement('a', 'border rounded my-1 text-start', this._form);
-			button.href = '#';
+			button.role = 'button';
+			button.href = target;
+			function handleClick(e) {
+				const url = new URL(button.href, window.location.href);
+				for (let [k, v] of new URLSearchParams(window.location.search).entries()) {
+					url.searchParams.set(k, v);
+				}
+				button.href = url.toString();
+				e.href = url.toString();
+				console.log(e.href);
+			}
+			button.addEventListener('click', (e) => {
+				handleClick(e);
+				// e.preventDefault()
+				// e.stopPropagation()
+			});
+			button.addEventListener('auxclick', (e) => {
+				handleClick(e);
+				// e.preventDefault()
+				// e.stopPropagation()
+			});
 			button.innerHTML = map;
-		});
+		}
 
 		const linkAndIcon = this.options.createButtonCallback(container, this.options);
 		this._link = linkAndIcon.link;
