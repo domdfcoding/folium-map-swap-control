@@ -57,7 +57,7 @@ class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement): 
 	def __init__(self, maps: dict[str, str], icon: str = "fa-solid fa-map", **kwargs):
 		super().__init__()
 		self._name = "MapSwapControl"
-		self.options = remove_empty(icon=icon, **kwargs)
+		self.options = remove_empty(maps=maps, icon=icon, **kwargs)
 
 	default_js = [
 			(
