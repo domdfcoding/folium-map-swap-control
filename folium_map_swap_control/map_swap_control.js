@@ -114,6 +114,10 @@ const MapSwapControl = L.Control.extend({
 		this._icon = linkAndIcon.icon;
 
 		this._link.addEventListener('click', (e) => this.onClick(e));
+		this._link.addEventListener('dblclick', (e) => {
+			e.preventDefault();
+			e.stopPropagation();
+		});
 
 		return container;
 	},
