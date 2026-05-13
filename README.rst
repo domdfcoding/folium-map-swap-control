@@ -59,7 +59,7 @@ folium-map-swap-control
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/folium-map-swap-control
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/folium-map-swap-control/v0.0.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/folium-map-swap-control/v0.1.0b1
 	:target: https://github.com/domdfcoding/folium-map-swap-control/pulse
 	:alt: GitHub commits since tagged version
 
