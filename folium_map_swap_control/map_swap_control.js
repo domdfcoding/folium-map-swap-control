@@ -33,7 +33,6 @@
 
 // TODO: generate from typescript
 
-
 const MapSwapControl = L.Control.extend({
 	options: {
 		/** Position of the control */
@@ -59,33 +58,30 @@ const MapSwapControl = L.Control.extend({
 			const icon = createElement(options.iconElementTag, options.icon, link);
 			icon.classList.add('leaflet-map-swap-icon');
 
-
-
 			return { link, icon };
 		},
 	},
 
 	onClick(event) {
-		console.log("Clicked", this._container.classList.contains('active'))
+		console.log('Clicked', this._container.classList.contains('active'));
 		event.preventDefault();
 		event.stopPropagation();
-	
+
 		if (this._container.classList.contains('active')) {
-		  this.close();
+			this.close();
 		} else {
-		  this.open();
+			this.open();
 		}
-	  },
+	},
 
 	open() {
 		this._container.classList.add('active');
 		this._form.focus();
-	  },
-	
-	  close() {
+	},
+
+	close() {
 		this._container.classList.remove('active');
-	  },
-	
+	},
 
 	initialize(options = {}) {
 		// Clone default options to prevent prototype pollution
@@ -107,25 +103,24 @@ const MapSwapControl = L.Control.extend({
 	 * Add control to map. Returns the container for the control.
 	 */
 	onAdd(map) {
-		const container = createElement('div', 'leaflet-control-map-swap leaflet-bar leaflet-control leaflet-map-swap-button');
+		const container = createElement('div',
+			'leaflet-control-map-swap leaflet-bar leaflet-control leaflet-map-swap-button');
 		this._container = container;
 		this._map = map;
 
 		this._form = createElement('form', '', container);
-		this._form.autocomplete = "off"
+		this._form.autocomplete = 'off';
 		// TODO: make it a standard button or hyperlink
-		this._form.innerHTML = '<input class="glass" type="submit" value="Go to Heatmap">'
+		this._form.innerHTML = '<input class="glass" type="submit" value="Go to Heatmap">';
 		const linkAndIcon = this.options.createButtonCallback(container, this.options);
 		this._link = linkAndIcon.link;
 		this._icon = linkAndIcon.icon;
 
-		this._link.addEventListener("click", (e) => this.onClick(e))
+		this._link.addEventListener('click', (e) => this.onClick(e));
 
 		return container;
 	},
 });
-
-
 
 function mapSwapControl(options) {
 	return new MapSwapControl(options);

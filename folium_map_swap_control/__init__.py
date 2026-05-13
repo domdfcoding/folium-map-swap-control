@@ -31,10 +31,10 @@ from re import Match
 
 # 3rd party
 import folium.elements
-import markdown
 from folium.template import Template
 from folium.utilities import remove_empty
-from markdown.inlinepatterns import IMAGE_LINK_RE, ImageInlineProcessor
+
+__all__ = ["MapSwapControl"]
 
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2026 Dominic Davis-Foster"
