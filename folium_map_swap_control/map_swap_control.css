@@ -12,8 +12,8 @@
 	box-sizing: border-box;
 }
 
-/* search form styling */
-.leaflet-control-map-swap form {
+/* Links styling */
+.leaflet-control-map-swap .map-swap-links {
 	display: none;
 	position: absolute;
 	top: 0;
@@ -43,16 +43,16 @@
 
 }
 
-.leaflet-control-map-swap.active form {
+.leaflet-control-map-swap.active .map-swap-links {
 	display: block;
 }
 
-.leaflet-touch .leaflet-map-swap-bar form {
+.leaflet-touch .leaflet-map-swap-bar .map-swap-links {
 	border: 2px solid rgba(0, 0, 0, 0.2);
 	box-shadow: none;
 }
 
-.leaflet-touch .leaflet-map-swap-bar form a {
+.leaflet-touch .leaflet-map-swap-bar .map-swap-links a {
 	height: 30px;
 }
 
@@ -67,7 +67,7 @@
 	z-index: 1000;
 }
 
-.leaflet-map-swap-bar form {
+.leaflet-map-swap-bar .map-swap-links {
 	position: relative;
 	top: 0;
 	left: 0;
@@ -81,7 +81,7 @@
 
 }
 
-.leaflet-right .leaflet-control-map-swap form {
+.leaflet-right .leaflet-control-map-swap .map-swap-links {
 	right: 28px;
 	left: initial;
 	border-radius: 4px 0 0 4px;
