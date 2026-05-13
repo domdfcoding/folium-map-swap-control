@@ -86,7 +86,7 @@ const MapSwapControl = L.Control.extend({
 		 */
 		createButtonCallback(container, options) {
 			const link = createElement('a', 'leaflet-bar-part leaflet-bar-part-single', container);
-			link.title = 'Go to Heatmap';
+			link.title = 'Go to a different map';
 			link.href = '#';
 			link.setAttribute('role', 'button');
 			link.setAttribute('aria-label', link.title);
