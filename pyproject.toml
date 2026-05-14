@@ -4,7 +4,7 @@ build-backend = "whey"
 
 [project]
 name = "folium-map-swap-control"
-version = "0.1.0b1"
+version = "0.1.0b2"
 description = "Folium plugin that adds a control for swapping between maps."
 readme = "README.rst"
 keywords = []
