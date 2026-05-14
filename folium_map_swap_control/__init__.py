@@ -26,9 +26,6 @@ Folium plugin that adds a control for swapping between maps.
 #  OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-# stdlib
-from re import Match
-
 # 3rd party
 import folium.elements
 from folium.template import Template
@@ -43,9 +40,9 @@ __version__: str = "0.1.0b1"
 __email__: str = "dominic@davis-foster.co.uk"
 
 
-class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement):  # noqa: PRM003
+class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement):
 	r"""
-	Control for swapping between maps
+	Control for swapping between maps.
 
 	:param maps: Mapping of map names (raw HTML allowed) to hyperlinks.
 	:param icon: The control's icon.
