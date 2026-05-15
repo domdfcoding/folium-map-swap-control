@@ -23,8 +23,3 @@ bare-ignore:
 
 lint: unused-imports incomplete-defs bare-ignore
 	tox -n qa
-
-uncomm:
-  git status -uall --ignored
-
-# Custom commands can be added below this comment
