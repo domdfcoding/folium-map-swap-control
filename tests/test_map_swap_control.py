@@ -1,3 +1,6 @@
+# stdlib
+import re
+
 # 3rd party
 from coincidence.regressions import AdvancedFileRegressionFixture
 from domdf_folium_tools import set_branca_random_seed
@@ -21,4 +24,9 @@ def test_control(advanced_file_regression: AdvancedFileRegressionFixture):
 
 	root = m.get_root()
 	html = root.render()
+	html = re.sub(
+			"folium-map-swap-control@v.*/map_swap_control",
+			"folium-map-swap-control@v0.0.0/map_swap_control",
+			html,
+			)
 	advanced_file_regression.check(html, extension=".html")
