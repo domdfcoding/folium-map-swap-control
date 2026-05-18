@@ -16,7 +16,7 @@ folium-map-swap-control
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux| |actions_windows| |actions_macos|
+	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
 	* - Activity
 	  - |commits-latest| |commits-since| |maintained|
 	* - QA
@@ -47,6 +47,10 @@ folium-map-swap-control
 .. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/folium-map-swap-control/badge.svg
 	:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/folium-map-swap-control/
 	:alt: Requirements Status
+
+.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/folium-map-swap-control/master?logo=coveralls
+	:target: https://coveralls.io/github/domdfcoding/folium-map-swap-control?branch=master
+	:alt: Coverage
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/folium-map-swap-control?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/folium-map-swap-control
