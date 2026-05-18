@@ -95,7 +95,7 @@ repos:
       exclude: ^(doc-source/conf|__pkginfo__|setup)\.(_)?py$
       additional_dependencies:
        - formate-trailing-commas>=0.1.1
-       - formate-js>=0.1.0
+       - formate-js>=0.1.0.post1
       types_or:
        - python
        - pyi
