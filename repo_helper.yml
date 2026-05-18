@@ -11,7 +11,6 @@ short_desc: 'Folium plugin that adds a control for swapping between maps.'
 
 enable_conda: false
 enable_docs: false
-on_pypi: false
 use_whey: true
 min_coverage: 100
 

@@ -17,8 +17,10 @@ folium-map-swap-control
 
 	* - Tests
 	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
+	* - PyPI
+	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
-	  - |commits-latest| |commits-since| |maintained|
+	  - |commits-latest| |commits-since| |maintained| |pypi-downloads|
 	* - QA
 	  - |codefactor| |actions_flake8| |actions_mypy|
 	* - Other
@@ -56,6 +58,22 @@ folium-map-swap-control
 	:target: https://www.codefactor.io/repository/github/domdfcoding/folium-map-swap-control
 	:alt: CodeFactor Grade
 
+.. |pypi-version| image:: https://img.shields.io/pypi/v/folium-map-swap-control
+	:target: https://pypi.org/project/folium-map-swap-control/
+	:alt: PyPI - Package Version
+
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/folium-map-swap-control?logo=python&logoColor=white
+	:target: https://pypi.org/project/folium-map-swap-control/
+	:alt: PyPI - Supported Python Versions
+
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/folium-map-swap-control
+	:target: https://pypi.org/project/folium-map-swap-control/
+	:alt: PyPI - Supported Implementations
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/folium-map-swap-control
+	:target: https://pypi.org/project/folium-map-swap-control/
+	:alt: PyPI - Wheel
+
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/folium-map-swap-control
 	:target: https://github.com/domdfcoding/folium-map-swap-control/blob/master/LICENSE
 	:alt: License
@@ -74,6 +92,10 @@ folium-map-swap-control
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
+.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/folium-map-swap-control
+	:target: https://pypistats.org/packages/folium-map-swap-control
+	:alt: PyPI - Downloads
+
 .. end shields
 
 Installation
@@ -81,12 +103,12 @@ Installation
 
 .. start installation
 
-``folium-map-swap-control`` can be installed from GitHub.
+``folium-map-swap-control`` can be installed from PyPI.
 
 To install with ``pip``:
 
 .. code-block:: bash
 
-	$ python -m pip install git+https://github.com/domdfcoding/folium-map-swap-control
+	$ python -m pip install folium-map-swap-control
 
 .. end installation
