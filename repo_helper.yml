@@ -25,7 +25,7 @@ manifest_additional:
  - include folium_map_swap_control/map_swap_control.css
 
 extra_formate_deps:
- - formate-js>=0.1.0.post1
+ - formate-js>=0.1.0
 
 extra_formate_types:
  - javascript
