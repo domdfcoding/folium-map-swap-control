@@ -41,7 +41,7 @@ __all__ = ["MapSwapControl"]
 __author__: str = "Dominic Davis-Foster"
 __copyright__: str = "2026 Dominic Davis-Foster"
 __license__: str = "MIT License"
-__version__: str = "0.2.0.post1"
+__version__: str = "0.3.0"
 __email__: str = "dominic@davis-foster.co.uk"
 
 
