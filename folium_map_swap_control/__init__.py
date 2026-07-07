@@ -101,3 +101,5 @@ class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement):
 			{% endmacro %}
 			""",
 			)
+
+	_template.environment.policies["json.dumps_kwargs"] = {"sort_keys": False}
