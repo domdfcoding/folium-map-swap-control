@@ -26,6 +26,11 @@ Folium plugin that adds a control for swapping between maps.
 #  OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
+# stdlib
+import json
+from collections import OrderedDict
+from typing import Any
+
 # 3rd party
 import folium.elements
 from folium.template import Template
@@ -38,6 +43,17 @@ __copyright__: str = "2026 Dominic Davis-Foster"
 __license__: str = "MIT License"
 __version__: str = "0.2.0.post1"
 __email__: str = "dominic@davis-foster.co.uk"
+
+
+class Maps(dict[str, str]):
+	pass
+
+
+def _dumps_function(data: Any, sort_keys: bool = True, **kwargs) -> str:
+	if isinstance(data, OrderedDict):
+		sort_keys = False
+
+	return json.dumps(data, sort_keys=sort_keys, **kwargs)
 
 
 class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement):
@@ -54,7 +70,7 @@ class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement):
 	def __init__(self, maps: dict[str, str], icon: str = "fa-solid fa-map", **kwargs):
 		super().__init__()
 		self._name = "MapSwapControl"
-		self.options = remove_empty(maps=maps, icon=icon, **kwargs)
+		self.options = OrderedDict(**remove_empty(maps=maps, icon=icon, **kwargs))
 
 	default_js = [
 			(
@@ -102,4 +118,4 @@ class MapSwapControl(folium.elements.JSCSSMixin, folium.elements.MacroElement):
 			""",
 			)
 
-	_template.environment.policies["json.dumps_kwargs"] = {"sort_keys": False}
+	_template.environment.policies["json.dumps_function"] = _dumps_function
